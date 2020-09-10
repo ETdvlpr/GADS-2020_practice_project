@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,8 +29,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Dialog extends AppCompatDialogFragment{
     private Submission submission;
 
-    public Dialog(String fname, String lname, String email, String plink) {
-        submission = new Submission(fname,lname,email,plink);
+    public Dialog(String fName, String lName, String email, String plink) {
+        submission = new Submission(fName, lName, email, plink);
     }
 
     @NonNull
@@ -39,9 +40,11 @@ public class Dialog extends AppCompatDialogFragment{
         LayoutInflater inflater = getActivity().getLayoutInflater();
         View view = inflater.inflate(R.layout.dialog_confirm, null);
         Button submit = view.findViewById(R.id.confirm_yes_btn);
+        final ProgressBar progressBar = view.findViewById(R.id.dialog_confirm_progress);
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                progressBar.setAlpha(1);
                 Retrofit retrofit = new Retrofit.Builder().baseUrl("https://docs.google.com/forms/d/e/").addConverterFactory(GsonConverterFactory.create()).build();
                 SubmitService service = retrofit.create(SubmitService.class);
                 Call<Submission> call = service.submitForm(submission);
@@ -54,6 +57,7 @@ public class Dialog extends AppCompatDialogFragment{
                             View view = getActivity().getLayoutInflater().inflate(R.layout.dialog_success, null);
                             new AlertDialog.Builder(getActivity()).setView(view).show();
                         }
+                        Dialog.this.getDialog().cancel();
                     }
 
                     @Override
@@ -64,6 +68,8 @@ public class Dialog extends AppCompatDialogFragment{
                             View view = getActivity().getLayoutInflater().inflate(R.layout.dialog_error, null);
                             new AlertDialog.Builder(getActivity()).setView(view).show();
                         }
+
+                        Dialog.this.getDialog().cancel();
                     }
                 });
             }
