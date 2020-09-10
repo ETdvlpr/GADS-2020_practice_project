@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GADS-2020 practice project</string>
+    <string name="main_title">Leader Board</string>
+    <string name="tab_text_1">Learning Leaders</string>
+    <string name="tab_text_2">Skill IQ Leaders</string>
+    <string name="image">Image</string>
+    <string name="submit">Submit</string>
+    <string name="logo">Logo</string>
+</resources>
