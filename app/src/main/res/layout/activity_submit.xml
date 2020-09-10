@@ -69,8 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/text_input_fname"
-                android:hint="@string/first_name"
-                android:text="Dawit"/>
+                android:hint="@string/first_name"/>
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             app:boxCornerRadiusBottomEnd="@dimen/text_input_corner"
@@ -86,8 +85,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/text_input_lname"
-                android:hint="@string/last_name"
-                android:text="Samuel"/>
+                android:hint="@string/last_name"/>
         </com.google.android.material.textfield.TextInputLayout>
     </LinearLayout>
 
@@ -105,8 +103,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/text_input_email"
-                android:hint="@string/email_address"
-                android:text="acedawitt@gmail.com"/>
+                android:hint="@string/email_address"/>
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
