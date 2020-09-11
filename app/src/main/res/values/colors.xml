@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#fff</color>
+    <color name="colorPrimary">#FFF</color>
     <color name="colorPrimaryDark">#000</color>
-    <color name="colorAccent">#000</color>
-    <color name="colorUnselectedTask">#bbb</color>
+    <color name="colorAccent">#ffae45</color>
+    <color name="textColorSecondary">#bbb</color>
+    <color name="lightOrange">#ffd095</color>
+    <color name="orange">#ffae45</color>
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
 </resources>

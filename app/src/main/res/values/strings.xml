@@ -6,4 +6,15 @@
     <string name="image">Image</string>
     <string name="submit">Submit</string>
     <string name="logo">Logo</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="project_on_github_link">Project on GITHUB (link)</string>
+    <string name="submission_title">Project Submission</string>
+    <string name="question_mark">\?</string>
+    <string name="are_you_sure">Are you Sure</string>
+    <string name="yes">Yes</string>
+    <string name="submission_successful">Submission Successful</string>
+    <string name="submission_failed">Submission Failed</string>
+    <string name="default_link">https://github.com/ETdvlpr/GADS-2020_practice_project</string>
 </resources>
